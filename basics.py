@@ -33,4 +33,18 @@ import pandas as pd
 
 def dropDuplicateEmails(customers: pd.DataFrame) -> pd.DataFrame:
     return customers.drop_duplicates(subset='email')
+
+#changing the name of the columns
+import pandas as pd
+
+def renameColumns(students: pd.DataFrame) -> pd.DataFrame:
+    students.rename(columns={'id':'student_id','first':'first_name','last':'last_name','age':'age_in_years'},inplace=True)
+    return students
   
+#FILLING THE NULL WITH 0 IN THE QUANTITY COLUMN
+import pandas as pd
+
+def fillMissingValues(products: pd.DataFrame) -> pd.DataFrame:
+    products['quantity'].fillna(0,inplace=True)
+    return products
+    
